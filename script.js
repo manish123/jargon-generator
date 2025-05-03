@@ -52,7 +52,6 @@ const phrases = [
   { text: "Level set expectations", meaning: "Clarify what’s realistic or possible." },
 ];
 
-
 function generateJargon() {
   const randomIndex = Math.floor(Math.random() * phrases.length);
   const selectedPhrase = phrases[randomIndex];
@@ -60,6 +59,7 @@ function generateJargon() {
   document.getElementById("jargonText").innerText = selectedPhrase.text;
   document.getElementById("jargonMeaning").innerText = selectedPhrase.meaning;
 }
+
 document.getElementById("copyButton").addEventListener("click", function() {
   const jargonText = document.getElementById("jargonText").innerText;
   const jargonMeaning = document.getElementById("jargonMeaning").innerText;
