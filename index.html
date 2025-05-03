@@ -9,9 +9,15 @@
 <body>
   <div class="container">
     <h1>Corporate Jargon Generator</h1>
-<p id="jargonText"></p>
-<p id="jargonMeaning" style="font-style: italic; color: gray;"></p>
+    <!-- Adding some space below the heading -->
+    <div style="margin-bottom: 20px;"></div>
+    
+    <p id="jargonText"></p>
+    <p id="jargonMeaning" style="font-style: italic; color: gray;"></p>
+    
     <button onclick="generateJargon()">Generate</button>
+    <!-- Adding the Copy to Clipboard button below the Generate button -->
+    <button id="copyButton">Copy to Clipboard</button>
   </div>
   <script src="script.js"></script>
 </body>
