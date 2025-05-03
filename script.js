@@ -60,3 +60,21 @@ function generateJargon() {
   document.getElementById("jargonText").innerText = selectedPhrase.text;
   document.getElementById("jargonMeaning").innerText = selectedPhrase.meaning;
 }
+document.getElementById("copyButton").addEventListener("click", function() {
+  const jargonText = document.getElementById("jargonText").innerText;
+  const jargonMeaning = document.getElementById("jargonMeaning").innerText;
+
+  // Combine the text and meaning to copy to clipboard
+  const fullText = `${jargonText}\n\nMeaning: ${jargonMeaning}`;
+
+  // Create a temporary input element to hold the text for copying
+  const tempInput = document.createElement("input");
+  document.body.appendChild(tempInput);
+  tempInput.value = fullText;
+  tempInput.select();
+  document.execCommand("copy");
+  document.body.removeChild(tempInput);
+
+  // Notify the user that it has been copied
+  alert("Copied to clipboard!");
+});
