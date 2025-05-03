@@ -8,17 +8,23 @@
 </head>
 <body>
   <div class="container">
-    <h1>Corporate Jargon Generator</h1>
-    <!-- Adding some space below the heading -->
-    <div style="margin-bottom: 20px;"></div>
+    <h1>
+      <img src="icon.png" alt="Logo" style="width: 30px; vertical-align: middle; margin-right: 10px;">
+      Corporate Jargon Generator
+    </h1>
+    <p class="subtitle">Generate corporate buzzwords and learn their meanings instantly!</p>
     
-    <p id="jargonText"></p>
-    <p id="jargonMeaning" style="font-style: italic; color: gray;"></p>
+    <p id="jargonText" style="color: #bdc3c7;">Click 'Generate' to create jargon</p>
+    <p id="jargonMeaning" style="font-style: italic; color: gray; min-height: 40px;"> </p>
     
-    <button onclick="generateJargon()">Generate</button>
-    <!-- Adding the Copy to Clipboard button below the Generate button -->
-    <button id="copyButton">Copy to Clipboard</button>
+    <div class="button-group">
+      <button onclick="generateJargon()">Generate</button>
+      <button id="copyButton">Copy to Clipboard</button>
+    </div>
   </div>
+  <footer style="margin-top: 20px; font-size: 0.8rem; color: #95a5a6;">
+    <p>Made by <a href="https://github.com/manish123" target="_blank">manish123</a></p>
+  </footer>
   <script src="script.js"></script>
 </body>
 </html>
